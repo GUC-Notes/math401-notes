@@ -184,4 +184,15 @@ So The General case is
     \displaystyle \sum_{k = 1}^{\infty}   P(X = k) = \sum_{k = 1}^{\infty}p \times (1 - p)^{k-1}
     = p\sum_{k = 1}^{\infty}(1 - p)^{k-1} = p \times \frac{1}{p} = 1
 \end{equation}    
+\begin{exmp}
+    Given that the first $k$ trials were Failures. Find the probability that $(k+1)$-th trial will be a Success. \\
+
+    we need to find that $P(X = k + 1 | X > k)$
+    \begin{center}
+        $ \displaystyle  P(X = k + 1 | X > k) = \frac{P(X=k+1 \cap X>k)}{P(X>k)}
+        = \frac{p \times (1-p)^k}{(1-p)^k} = p = p(X = 1)$  this called lack of memory where the probability
+        of k + 1 is the same as the first
+\end{center}
+\end{exmp}    
+
 \end{document}
