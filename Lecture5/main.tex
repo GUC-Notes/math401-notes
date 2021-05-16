@@ -147,19 +147,40 @@ contains 2 green balls and 1 red ball, the
 other bottle contains 2 red balls.
 A bottle is selected at random, and a ball
 is drawn.
-What is the probability that the ball is red?\\
 
-
-Let B1 and B2 stand for the events that the first bottle and the seconed bottle 
-were selected. Hence $P(B_1) = P(B_2) = 0.5$ The chances to draw a red ball from b1 are 
-    $\frac{1}{3}$. for b2 the cahnces are 1.
-    \[
-        P(r)= P(B_1)P(r|B_1) + P(B_2)P(r|B_2) =
-    \]
-    \[
-        \frac{1}{2} \times \frac{1}{3} + \frac{1}{2} \times \frac{2}{2} 
-    \]
+Knowing that the ball is red. what is the probability that is drawn from the first bottle?
+\[
+    P(B1|red) = \frac{P(B1 \cap red)}{P(red)} = \frac{P(B1).P(red|B1)}{P(red)} 
+    = \frac{P(B_1).P(red|B_1)}{P(B_1).P(red|B_1) + P(B_2).P(red|B_2)} 
+\]
+\[
+    P(B_1|red) = \frac{\frac{1}{2}.\frac{1}{3}}{\frac{1}{3}.\frac{1}{2} + 1.\frac{1}{2}} 
+    = \frac{1}{4}
+\]
 \end{exmp}
+\subsection{Note}
+\begin{enumerate}
+    \item In the example, the event that a red ball was drawn
+from a bottle has affected the chances that it was a
+particular bottle.
+\item Originally, both bottles were equally likely,
+i.e. P(B1) = P(B2) = 0.5.
+\item With a red ball drawn, it is three times more likely that
+the second bottle was selected, as the respective
+conditional probability is 0.75 vs. 0.25 for Bottle 1.
+\end{enumerate}    
+\section{Bayes' Theorem}
+Let $A$ be an event of sample space $S$.
+Let $B_i$ be $n$ events such that:
+\begin{enumerate}
+    \item one of them must occur 
+    \item $B_i$ and $B_j$ cannot occur together.
+    \item $S$ is the union of $B_i$
+\end{enumerate}
+Then \textsf{Bayes' Formula} 
+\[
+    \displaystyle P(B_n|A) = \frac{P(B_n)P(A|B_n)}{\sum_{i = 1}^n P(B_i).P(A|B_i)}
+\]
 
 
 \end{document}
