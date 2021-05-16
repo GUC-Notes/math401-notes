@@ -1,0 +1,165 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Problem Set/Assignment Template to be used by the
+%% Food and Resource Economics Department - IFAS
+%% University of Florida's graduates.
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Version 1.0 - November 2019
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ariel Soto-Caro
+%%  - asotocaro@ufl.edu
+%%  - arielsotocaro@gmail.com
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Numbered environment
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{design_ASC}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\newtheorem{slo}{Solution}[section]
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+%% -----------------------------
+%% TITLE
+%% -----------------------------
+\title{\textbf{Lecture 5}} %% Assignment Title
+
+\author{\textbf{Ibrahim} Abou Elenein}
+
+\date{\today} %% Change "\today" by another date manually
+%% -----------------------------
+%% -----------------------------
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\setlength{\droptitle}{-5em}    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+\tableofcontents
+\pagebreak
+% --------------------------
+% Start here
+% --------------------------
+\section{Conditional Probability}
+The conditional probability of an event
+A occurring given an event B “i.e.,
+knowing that B has already occurred
+first” is given by:
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+
+\section{Independent Events}
+In general, two events A and B are called independent if 
+$$ P(A \cap B) = P(A) \times P(B)$$
+So we can say that 
+$$ P(A|B) = P(A) $$
+$$ P(B|A) = P(B) $$
+Also $$ P(A\cap B \cap C) = P(A)\times P(B) \times P(C)$$
+
+\begin{exmp}
+Assume that we role a die once:
+\begin{enumerate}
+    \item A is the event of getting an even number.
+        $$ P(A) = \frac{1}{2} $$
+    \item B is the event of getting a number $>$ 3.
+        $$ P(B) = \frac{1}{2} $$
+\end{enumerate}    
+Are A \& B Independent?
+$$ P(A\cap B) = \frac{1}{3} $$
+$$ P(A)\times P(B) = \frac{1}{4} $$
+A \& B are not independent
+\end{exmp}    
+\begin{exmp}
+In a box, there are 8 red and 3 green
+balls. We choose two balls randomly.
+Find the probability that:
+\begin{enumerate}
+    \item Both balls are red.
+        $$ P(2red)= P(r1)P(r2|r1) = \frac{8}{11} \times \frac{7}{10} $$
+    \item Both balls are green.
+        $$ P(2green) = P(g1)P(g2|g1) = \frac{3}{11} \times \frac{2}{10}$$
+    \item First ball is red, and the second ball is
+        $$ P(green,red) =  P(r1) \times P(g2|r1) 
+        = \frac{8}{11} \times \frac{3}{10}
+        $$
+\end{enumerate}
+\end{exmp}    
+\begin{exmp}
+     One card is drawn from a standard deck, replaced, and then the second card
+     is drawn.  Find the probability that the first card is a king, and the
+     second one is not.
+ $$ P(E) = P(k) \times P(k') = \frac{4}{52} \times \frac{48}{52} $$
+ Note that the two events are independent.
+\end{exmp}
+\begin{exmp}
+     A box contains black chips and white chips. A person selects 2 chips. If
+     the probability of selecting a black chip and a white chip is 15/56, and
+     the probability of selecting a black chip on the first draw is 3/8.  
+     
+     Find the probability of selecting the white chip on the second draw, given that
+     the first chip selected was a black chip.
+     $$ P(W|B) = \frac{P(B \cap W)}{P(B)} = \frac{15/56}{3/8} $$
+\end{exmp}
+
+\section{Total Probability}
+Let $F$ be any event that is already occurred. Then, The sample space can be
+represented as $S = F \cup F'$ where $ F \cap F' = \emptyset $
+$$ P(E) = P(E \cap S) = P(E \cap (F \cup F')) = $$
+$$ P((E \cap F) \cup (E \cap F') ) = P(E\cap F)  + P(E \cap F') =$$
+$$ P(F) \times P(E|F) + P(F') \times P(E|F')$$
+It allows one to express the probability of any event in terms 
+of conditional probabilities
+$$ P(E) = P(F).P(E|F) + P(F').P(E|F'); \ \ F \cup F' = S; \ \ F \cap F' = \emptyset $$
+
+\begin{exmp}
+There are two identical bottles. One bottle
+contains 2 green balls and 1 red ball, the
+other bottle contains 2 red balls.
+A bottle is selected at random, and a ball
+is drawn.
+What is the probability that the ball is red?\\
+
+
+Let B1 and B2 stand for the events that the first bottle and the seconed bottle 
+were selected. Hence $P(B_1) = P(B_2) = 0.5$ The chances to draw a red ball from b1 are 
+    $\frac{1}{3}$. for b2 the cahnces are 1.
+    \[
+        P(r)= P(B_1)P(r|B_1) + P(B_2)P(r|B_2) =
+    \]
+    \[
+        \frac{1}{2} \times \frac{1}{3} + \frac{1}{2} \times \frac{2}{2} 
+    \]
+\end{exmp}
+\section{Bayes' Rule}
+ Suppose that S is represented as the union of
+finite number “n” of disjoint events $F_j$ .
+ Then the total probability rule can be generalized as follows:
+ \[
+     \displaystyle P(E) = \sum_{k=1}^n P(F_k).P(E|F_k)
+ \]
+ \[
+     \bigcup_{k=1}^n F_k = S; \ \ F_i \cap F_j = \emptyset : i \neq j.
+ \]
+
+\begin{exmp}
+There are two identical bottles. One bottle
+contains 2 green balls and 1 red ball, the
+other bottle contains 2 red balls.
+A bottle is selected at random, and a ball
+is drawn.
+What is the probability that the ball is red?\\
+
+
+Let B1 and B2 stand for the events that the first bottle and the seconed bottle 
+were selected. Hence $P(B_1) = P(B_2) = 0.5$ The chances to draw a red ball from b1 are 
+    $\frac{1}{3}$. for b2 the cahnces are 1.
+    \[
+        P(r)= P(B_1)P(r|B_1) + P(B_2)P(r|B_2) =
+    \]
+    \[
+        \frac{1}{2} \times \frac{1}{3} + \frac{1}{2} \times \frac{2}{2} 
+    \]
+\end{exmp}
+
+
+\end{document}
