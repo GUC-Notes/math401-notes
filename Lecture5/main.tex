@@ -182,5 +182,18 @@ Then \textsf{Bayes' Formula}
     \displaystyle P(B_n|A) = \frac{P(B_n)P(A|B_n)}{\sum_{i = 1}^n P(B_i).P(A|B_i)}
 \]
 
+\begin{exmp}
+     A manufacturer of DVD players purchases a microchip from 3 suppliers: hp,
+    Sony, and Dell. 30\% of the chips are purchased from hp, 20\% from Sony, and
+    50\% from Dell. The manufacturer has extensive histories on the 3 suppliers
+    and knows that 3\% of the chips from hp are defective, 5\% of the chips from
+    Sony are defective, and 4\% of the chips from Dell are defective. When the
+    chips arrive at the manufacturer, they are placed directly in a bin.
 
+    A worker selects a chip for installation in DVD player and finds it
+    defective. What is the probability that it is Sony?
+    \[
+        P(S|D) = \frac{P(S).P(D|S)}{P(h).P(D|h) + P(S).P(D|S) + P(d).P(D|d)}
+    \]
+\end{exmp}    
 \end{document}
