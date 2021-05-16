@@ -217,4 +217,18 @@ the probability of a single bit in error being p.
 \begin{equation}
     P(X = k) = \Comb{k-1}{r-1} p^r (1-p)^{k-r}; \ \ k \geq r. 
 \end{equation}
+\begin{equation}
+    \displaystyle \sum_{k=r}^{\infty} \Comb{k-1}{r-1} p^r(1-p)^{k-r} =
+    \sum_{k' = 0}^{\infty} \Comb{k' + r -1}{k'} \ p^r (1-p)^{k'}
+\end{equation}
+given that $ \displaystyle \Comb{n}{k} = \Comb{n}{n- k}$
+
+\begin{equation}
+    \displaystyle \sum_{k' = 0}^{\infty} \Comb{k' + r -1}{k'} \ p^r (1-p)^{k'} =
+    p^r \sum_{k'= 0}^{\infty}  \Comb{k' + r-1}{r-1}(1-p)^{k'}
+\end{equation}
+given that $ \displaystyle \frac{1}{(1-x)^r} = \sum_{k=0}^{\infty} \Comb{k+r-1}{r-1}x^r $
+\begin{equation}
+    \displaystyle p^r \sum_{k'= 0}^{\infty}  \Comb{k' + r-1}{r-1}(1-p)^{k'} = p^r * \frac{1}{(1-(1-p))^r} = 1 
+\end{equation}
 \end{document}
