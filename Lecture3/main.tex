@@ -1,0 +1,269 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Problem Set/Assignment Template to be used by the
+%% Food and Resource Economics Department - IFAS
+%% University of Florida's graduates.
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Version 1.0 - November 2019
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ariel Soto-Caro
+%%  - asotocaro@ufl.edu
+%%  - arielsotocaro@gmail.com
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Numbered environment
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{design_ASC}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\newtheorem{slo}{Solution}[section]
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+%% -----------------------------
+%% TITLE
+%% -----------------------------
+\title{\textbf{Lecture 3}} %% Assignment Title
+
+\author{\textbf{Ibrahim} Abou Elenein}
+
+\date{\today} %% Change "\today" by another date manually
+%% -----------------------------
+%% -----------------------------
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\setlength{\droptitle}{-5em}    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+% --------------------------
+% Start here
+% --------------------------
+
+% %%%%%%%%%%%%%%%%%%%
+\section{Sample Spaces}
+The set of all possible outcomes of a random
+experiment is called a \textit{sample space}
+\section{Events}
+An event E, is a set of some outcomes of a
+probability experiment, i.e. a subset of the sample
+\[
+    E \subseteq S
+\]
+If an event E contains no outcomes, then E is an impossible event.
+
+\section{Probability}
+\[
+    P(E) = \frac{N(E)}{N(S)}
+\]
+\[
+    0 \leq P (E) \leq 1  ;  \ P(S) = 1 
+\]
+\begin{exmp}
+    A card is drawn from a standard deck.
+    Find the probabilities of the following events.
+    \begin{itemize}
+        \item Getting a queen.
+        \item Getting a club.
+        \item Getting a number.
+    \end{itemize}       
+
+\end{exmp}    
+\begin{slo}
+    \[
+        |S| = 52
+    \]
+    E1 is the event of getting a queen,
+    $\displaystyle P(E1) = \frac{|E1|}{|S|} = \frac{4}{52}=  \frac{1}{13}$
+    \\ 
+    E2 is the event of getting a club,
+    $\displaystyle P(E2) = \frac{|E2|}{|S|} = \frac{13}{52}=  \frac{1}{4}$ \\
+    E3 is the event of getting a number,
+    $ \displaystyle P(E3) = \frac{|E3|}{|S|} = \frac{40}{52}=  \frac{10}{13}$ \\
+
+
+\end{slo}
+
+\section{Counting Rules}
+\subsection{Multiplication Rule}
+In a sequence of two experiments, if the
+first experiment can occur in $m$ different
+ways and the second one can occur in $n$
+different ways, then the whole sequence
+can occur in $m \times n$  different ways.
+\begin{exmp}
+
+    Consider the manufacturing of:
+    number-plates consisting of two letters followed by four digits
+    \begin{enumerate}
+        \item  How many plates are possible?
+            \[
+                26 \times 26 \times 10 \times 10 \times 10 \times 10 = 6760000
+            \]
+        \item How many plates are possible, if no letter or digit can be repeated?
+            \[
+                26 \times 25 \times 10 \times 9 \times 8 \times 7 = 3276000 
+            \]
+    \end{enumerate}
+
+\end{exmp}
+
+\begin{exmp}
+    In a class of 10 students, 6 are to be chosen and seated in a row for a
+    picture.
+    How many different pictures are possible?
+    \[
+        10 \times 9 \times 8 \times 7 \times 6 \times 5 \ different \  pictures.
+    \]
+    \textbf{Tip} what if they were to sit in a circle?
+\end{exmp}
+
+\subsection{Permutaion}
+An arrangement of $n$ objects \textsc{ a specific order} using $k$ objects at a time is
+called a permutation and it is denoted by $\Perm{n}{k}$. 
+The number of repetition-free
+permutations (linear arrangements) of size $k$ from a set of $n$ distinct objects
+is given by:
+\[
+    \Perm{n}{k} = \frac{n!}{(n - k)!}; \ \ 0 \leq k \leq n
+\]
+
+\subsection{Combination}
+A selection of $k$ distinct objects \textsc{without regard to order} out of $n$
+objects is called a combination and it is denoted by $\Comb{n}{k} $
+The number of repetition-free combinations of size k from n distinct objects is given:
+\[
+    \Comb{n}{k} = \frac{\Perm{n}{k}}{k!} = \frac{n!}{(n - k)!k!}; \ \  0 \leq k \leq n
+\]
+\subsection{Problems}
+\begin{exmp}
+
+\end{exmp}    
+\begin{exmp}
+    In a class of 10 students, three are to be chosen to represent the class in a
+    competition.  How many selections are possible? \\
+
+    Note that, here, the students are not selected in any 
+    specific order.
+
+    The number of selections is $\Comb{10}{3} $
+
+\end{exmp}    
+
+\begin{exmp}
+    A student is taking a Math-401 test in which 7 questions out of 10 are to be
+    answered. In how many ways can the student answer the exam if :
+\end{exmp}    
+\begin{enumerate}
+    \item Any 7 questions may be selected.
+        \begin{center}
+            The student can answer the exam in $\Comb{10}{7}$
+        \end{center}
+    \item The first 2 questions must be selected.
+        \begin{center}
+            The student can answer the exam in $\Comb{8}{5}$
+        \end{center}
+    \item The student must choose 3 questions from the first 5 and 4 questions from the
+        \begin{center}
+            The student can answer the exam in $\Comb{5}{3} \times \Comb{5}{4} = 50$
+        \end{center}
+\end{enumerate}       
+
+
+\begin{exmp}
+    What is the number of (possibly meaningless) words that are made up of all the
+    letters in the word \textbf{chemistry}
+\end{exmp}    
+\begin{center}
+    The number of such words id $\Perm{9}{9}$
+\end{center}
+
+\begin{exmp}
+    What is the number of permutations of the letters in the word \textbf{ball}?
+    \begin{center}
+        Note that there are repeated letter so it's not 4 distinct objects.
+    \end{center}    
+    \begin{center}
+        The number of permutations is $\displaystyle  \frac{\Perm{4}{4}}{2!} = 12$
+    \end{center}    
+\end{exmp}    
+
+\begin{exmp}
+    What is the number of permutations of the letters in the word \textbf{Pepper}?
+
+    \begin{center}
+        The number of permutations is $\displaystyle  \frac{\Perm{6}{6}}{2!3!}$
+    \end{center}   
+\end{exmp}    
+
+\begin{exmp}
+    The owner of a pizzeria prepares every pizza by always combining 4 different
+    ingredients. How many ingredients does he need, at least, if he would like to
+    offer 30 different pizzas in the menu?
+    \begin{center}
+        we need to find $n$ such that $\Comb{n}{4} = 30$ 
+    \end{center}    
+    \begin{center}
+        $\displaystyle \frac{n!}{(n-4)!4!} = 30$ \\
+    \end{center}    
+    \begin{center}
+        $\displaystyle \frac{n(n-1)(n-2)(n-3)(n-4)!}{(n-4)!} = 30 \times 4!$
+    \end{center}    
+    \begin{center}
+        $\displaystyle n(n-1)(n-2)(n-3) - 720 = 0$ \\
+
+        By solving the equation $n = 6.8 \Rightarrow $he needs at least 7 ingredients
+    \end{center}    
+
+\end{exmp}    
+
+\begin{exmp}
+    You play a simple card game. You draw 3 cards. If any of them is a King or
+    the three cards are of the same suit, you win otherwise you lose.
+    How many hands are you winning? 
+    \begin{center}
+        A = draw at least one king in a hand of 3 cards \\
+        N(A) = One King or Two or Three = \\
+        $ (\Comb{4}{1} \times \Comb{48}{2})+ (\Comb{4}{2} \times \Comb{48}{1})
+        + (\Comb{4}{3} \times \Comb{48}{0})
+        $
+    \end{center}    
+    \begin{center}
+        B = A hand draw 3 cards with  same suit \\
+        $N(B) = \Perm{4}{1} \times \Perm{13}{3}$ \\
+    \end{center}   
+    \begin{center}
+        $A \cap B$ = a hand with draw 3 cards with a king and the same suit.
+        $N(A \cap B) = \Comb{4}{1} \times \Comb{1}{1} \Comb{12}{2}  $
+    \end{center}   
+    \begin{center}
+        $N(A \cup  B) = N(A) + N(B) - N(A \cap B) = 5684.$    
+    \end{center}
+\end{exmp}    
+
+\begin{exmp}
+    In how many ways you can arrange the word “ORANGE”, if: 
+    \begin{itemize}
+        \item 2 vowels and 2 consonants are used to make 4-letter words.  
+            \begin{center}
+                No.of ways = $\Comb{3}{2} \times \Comb{3}{2} \times 4! $
+            \end{center}   
+        \item 2 vowels and 3 consonants are used to make 5-letter words. 
+            \begin{center}
+                No.of ways = $\Comb{3}{2} \times \Comb{3}{3} \times 5! $
+            \end{center}   
+        \end{itemize}
+\end{exmp}
+\begin{exmp}
+    There are 8 men and 9 women on a committee selection pool.
+    A committee consisting of:
+    a president, a vice-president, and 3 coordinators; is to
+    be formed.  
+    In how many ways can exactly three women be on the committee?
+    \begin{center}
+        $\displaystyle N = \Comb{9}{3} \times \Comb{8}{2}  \times [\frac{5!}{3!}]$  
+    \end{center}
+
+\end{exmp}    
+\end{document}
