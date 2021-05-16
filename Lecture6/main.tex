@@ -20,7 +20,7 @@
 \newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
 \newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
 \setlength\parindent{0pt} %% Do not touch this
-
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
 %% -----------------------------
 %% TITLE
 %% -----------------------------
@@ -215,7 +215,8 @@ received until r bits are received in error, with
 the probability of a single bit in error being p.
 \end{slo}   
 \begin{equation}
-    P(X = k) = \Comb{k-1}{r-1} p^r (1-p)^{k-r}; \ \ k \geq r. 
+    P(X = k) =  \underbrace{p^r}_{\text{first trial}} 
+    \ \ \underbrace{\Comb{k-1}{r-1} (1-p)^{k-r}}_{\text{(r - 1)success in(k - 1)trial}}; \ \ k \geq r. 
 \end{equation}
 \begin{equation}
     \displaystyle \sum_{k=r}^{\infty} \Comb{k-1}{r-1} p^r(1-p)^{k-r} =
