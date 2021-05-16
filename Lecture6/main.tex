@@ -14,6 +14,7 @@
 \usepackage{design_ASC}
 
 \theoremstyle{definition}
+\usepackage{longtable}
 \newtheorem{exmp}{Example}[section]
 \newtheorem{slo}{Solution}[section]
 \newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
@@ -23,9 +24,9 @@
 %% -----------------------------
 %% TITLE
 %% -----------------------------
-\title{\textbf{}} %% Assignment Title
+\title{\textbf{Discrete Random variable}} %% Assignment Title
 
-\author{\textbf{Ibrahim}}
+\author{\textbf{Ibrahim Abou Elenein}}
 
 \date{\today} %% Change "\today" by another date manually
 %% -----------------------------
@@ -42,7 +43,61 @@
 % --------------------------
 
 % %%%%%%%%%%%%%%%%%%%
-\section{}
-\subsubsection{}
+\section{Random Variable}
+ A random variable is a quantity “X ” resulting from an experiment, by chance,
+ that can assume different values.\\
+
+ A random variable is a variable “X” that
+ has a single numerical value determined by chance, for each outcome of a
+ procedure.\\
+
+ If a sample space S is discrete, then every R.V.  defined on S is
+ also discrete, i.e., its range is countable (think of random counts for
+ examples).
+\section{Discrete Random Variable}
+ A Discrete Random Variable is a variable that can assume only certain clearly
+ separated values. \\
+
+ A Discrete Random Variable has either a finite or countable
+ number of values, where “countable” refers to the fact that there might be
+ infinitely many values, but they can be associated with a counting process.
+ \subsection{Examples of Discrete Random Variables}
+ \begin{itemize}
+     \item The outcome of rolling a single die.
+     \item The number of boys in a family with three children.
+     \item The number of heads that appear when a coin is flipped nine times.
+     \item The sum of the numbers on the dice, when k dice are rolled.
+     \item The number of bits received in error when n bits are received.
+     \item The number of bits received until the r-th error.
+ \end{itemize}
+ \section{Discrete Probability Distributions}
+A discrete probability distribution is a listing of 
+all possible values of a random variable along 
+with their probabilities. \\
+\begin{equation}
+    \displaystyle \frac{X}{P(X)} \frac{|x_1|}{|p_1|} \frac{|x_2|}{|p_2|} \frac{|x_2|}{|p_2|} 
+    \frac{|\dots|}{|\dots|} \frac{|x_k|}{|p_k|}; \  \ \  \sum _{k \geq 1} p_k = 1.
+\end{equation}    
+\begin{enumerate}
+    \item The sum of all probabilities must be 1in any probability distribution
+    \item All probability values must be in [0,1]
+\end{enumerate}
+\begin{exmp}
+    x $\Rightarrow$ The number of heads appearing when a coin is flipped three times.
+
+\end{exmp}
+    
+% Please add the following required packages to your document preamble:
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{lllll}
+X    & 0   & 1   & 2   & 3   \\
+\endfirsthead
+%
+\endhead
+%
+P(X) & 1/8 & 3/8 & 3/8 & 1/8
+\end{longtable}
+
+
 
 \end{document}
