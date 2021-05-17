@@ -45,33 +45,33 @@
 
 % %%%%%%%%%%%%%%%%%%%
 \section{Random Variable}
- A random variable is a quantity “X ” resulting from an experiment, by chance,
- that can assume different values.\\
+A random variable is a quantity “X ” resulting from an experiment, by chance,
+that can assume different values.\\
 
- A random variable is a variable “X” that
- has a single numerical value determined by chance, for each outcome of a
- procedure.\\
+A random variable is a variable “X” that
+has a single numerical value determined by chance, for each outcome of a
+procedure.\\
 
- If a sample space S is discrete, then every R.V.  defined on S is
- also discrete, i.e., its range is countable (think of random counts for
- examples).
+If a sample space S is discrete, then every R.V.  defined on S is
+also discrete, i.e., its range is countable (think of random counts for
+examples).
 \section{Discrete Random Variable}
- A Discrete Random Variable is a variable that can assume only certain clearly
- separated values. \\
+A Discrete Random Variable is a variable that can assume only certain clearly
+separated values. \\
 
- A Discrete Random Variable has either a finite or countable
- number of values, where “countable” refers to the fact that there might be
- infinitely many values, but they can be associated with a counting process.
- \subsection{Examples of Discrete Random Variables}
- \begin{itemize}
-     \item The outcome of rolling a single die.
-     \item The number of boys in a family with three children.
-     \item The number of heads that appear when a coin is flipped nine times.
-     \item The sum of the numbers on the dice, when k dice are rolled.
-     \item The number of bits received in error when n bits are received.
-     \item The number of bits received until the r-th error.
- \end{itemize}
- \section{Discrete Probability Distributions}
+A Discrete Random Variable has either a finite or countable
+number of values, where “countable” refers to the fact that there might be
+infinitely many values, but they can be associated with a counting process.
+\subsection{Examples of Discrete Random Variables}
+\begin{itemize}
+    \item The outcome of rolling a single die.
+    \item The number of boys in a family with three children.
+    \item The number of heads that appear when a coin is flipped nine times.
+    \item The sum of the numbers on the dice, when k dice are rolled.
+    \item The number of bits received in error when n bits are received.
+    \item The number of bits received until the r-th error.
+\end{itemize}
+\section{Discrete Probability Distributions}
 A discrete probability distribution is a listing of 
 all possible values of a random variable along 
 with their probabilities. \\
@@ -87,16 +87,16 @@ with their probabilities. \\
     x $\Rightarrow$ The number of heads appearing when a coin is flipped three times.
 
 \end{exmp}
-    
+
 % Please add the following required packages to your document preamble:
 % Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
 \begin{longtable}[c]{lllll}
-X    & 0   & 1   & 2   & 3   \\
-\endfirsthead
-%
-\endhead
-%
-P(X) & 1/8 & 3/8 & 3/8 & 1/8
+    X    & 0   & 1   & 2   & 3   \\
+    \endfirsthead
+    %
+    \endhead
+    %
+    P(X) & 1/8 & 3/8 & 3/8 & 1/8
 \end{longtable}
 
 \subsection{Bernoulli}
@@ -111,18 +111,18 @@ If a Bernoulli random variable, X, denotes No. of successes, then
     \item $ X = 0$ if the outcome is failure
 \end{enumerate}
 \begin{exmp}
-A bit is transmitted, it is received in error with probability “0.1”.\\
-Assume that 8 bits are transmitted independently.
-\begin{enumerate}
-    \item How many bits can be received in error?
-        \begin{center}
-            $\Perm{8}{2}$
-        \end{center}   
-    \item What is the probability that 2 bits are received in error
-        \begin{center}
-            $P(X=2) = \Perm{8}{2} \times (0.1)^2 (0.9)^6  $  
-        \end{center}   
-\end{enumerate}
+    A bit is transmitted, it is received in error with probability “0.1”.\\
+    Assume that 8 bits are transmitted independently.
+    \begin{enumerate}
+        \item How many bits can be received in error?
+            \begin{center}
+                $\Perm{8}{2}$
+            \end{center}   
+        \item What is the probability that 2 bits are received in error
+            \begin{center}
+                $P(X=2) = \Perm{8}{2} \times (0.1)^2 (0.9)^6  $  
+            \end{center}   
+    \end{enumerate}
 \end{exmp}    
 \subsection{Binomial Distribution}
 In general, let X stand for the number of bits received in error, when $n$ bits are transmitted,
@@ -135,20 +135,20 @@ with the probability of a single bit in error being $p$
     \sum_{k = 0}^{n} p_k  = \Comb{n}{k} \times p^k \times (1-p)^{n - k} = [(p)+(1-p)]^n = 1 ^ n = 1
 \end{equation}    
 \begin{exmp}
-A fair coin is tossed 10 times, what is the probability of getting:
-\begin{enumerate}
-    \item  Exactly 6 heads.
-        \begin{center}
-            $ n = 10; \ \ p = 0.5; q = 0.5 $ 
-        \end{center}   
-        \begin{center}
-            $P(X = 6) = \Comb{10}{6} \times (0.5)^6 \times (0.5)^4   $ 
-        \end{center}   
-    \item  At least 6 heads.
-        \begin{center}
-            $P(X \geq 6) = P(X = 6) + P(X = 7) + P(X = 8) + P(X = 9) + P(X = 10)  $
-        \end{center}   
-\end{enumerate}
+    A fair coin is tossed 10 times, what is the probability of getting:
+    \begin{enumerate}
+        \item  Exactly 6 heads.
+            \begin{center}
+                $ n = 10; \ \ p = 0.5; q = 0.5 $ 
+            \end{center}   
+            \begin{center}
+                $P(X = 6) = \Comb{10}{6} \times (0.5)^6 \times (0.5)^4   $ 
+            \end{center}   
+        \item  At least 6 heads.
+            \begin{center}
+                $P(X \geq 6) = P(X = 6) + P(X = 7) + P(X = 8) + P(X = 9) + P(X = 10)  $
+            \end{center}   
+    \end{enumerate}
 \end{exmp}    
 
 \subsection{Geometric Distribution}
@@ -193,7 +193,7 @@ So The General case is
         $ \displaystyle  P(X = k + 1 | X > k) = \frac{P(X=k+1 \cap X>k)}{P(X>k)}
         = \frac{p \times (1-p)^k}{(1-p)^k} = p = p(X = 1)$  this called lack of memory where the probability
         of k + 1 is the same as the first
-\end{center}
+    \end{center}
 \end{exmp}    
 \subsection{Negative Binomial}
 When a bit is transmitted, it is received in error with probability “0.1”.
@@ -211,9 +211,9 @@ Assume that bits are transmitted independently, until FOUR bits are received in 
 
 \end{enumerate}   
 \begin{slo}
- In general, let X stand for the number of bits
-received until r bits are received in error, with
-the probability of a single bit in error being p.
+    In general, let X stand for the number of bits
+    received until r bits are received in error, with
+    the probability of a single bit in error being p.
 \end{slo}   
 \begin{equation}
     P(X = k) =  \underbrace{p^r}_{\text{last trial}} 
@@ -236,12 +236,12 @@ given that $ \displaystyle \frac{1}{(1-x)^r} = \sum_{k=0}^{\infty} \Comb{k+r-1}{
 \section{Notes}
 \begin{enumerate}
     \item Recall that a binomial random variable is a count of the number
-    of successes in n Bernoulli trials. That is, the number of trials n is
-    predetermined, and the number of successes represents the random variable X.
+        of successes in n Bernoulli trials. That is, the number of trials n is
+        predetermined, and the number of successes represents the random variable X.
     \item  A negative binomial random variable is a count of the number of
-trials required to obtain r successes. That is, the number of
-successes r is predetermined, and the number of trials (n or k)
-represents the random variable X.
+        trials required to obtain r successes. That is, the number of
+        successes r is predetermined, and the number of trials (n or k)
+        represents the random variable X.
 \end{enumerate}    
 
 \section{Probability Mass Function}
@@ -253,9 +253,9 @@ X, with possible values $x_1, x_2\dots, x_n.$ A probability mass function is a f
     \item \[  \displaystyle \sum_{k=1}^{n} f(x_k) = 1.       \]
 \end{enumerate}
 Example :\[ f(x)= \begin{cases} 
-      p_k, & x=x_k \\
-      0, & otherwise
-   \end{cases}
+    p_k, & x=x_k \\
+    0, & otherwise
+\end{cases}
 \] $f$ is a function that is non-trivial only on the range of $X$.
 
 \begin{center}
@@ -268,14 +268,14 @@ The cumulative probability function of a DRV X is defined by:
     \displaystyle F(x) = P(X \leq x) = \sum_{x_k \leq x}f(x_k)
 \]
 \[ F(x)= \begin{cases} 
-      0, & x < x_1 \\
-      p_1, & x_1 \leq x < x_2 \\
-      p_1 + p_2, & x_2 \leq x < x_3 \\
-      \dots
-   \end{cases}
+    0, & x < x_1 \\
+    p_1, & x_1 \leq x < x_2 \\
+    p_1 + p_2, & x_2 \leq x < x_3 \\
+    \dots
+\end{cases}
 \]
 \begin{center}
-\includegraphics[width=200px]{3.png}
+    \includegraphics[width=200px]{3.png}
 \end{center}
 \subsection{Notes}
 \begin{enumerate}
@@ -286,18 +286,18 @@ The cumulative probability function of a DRV X is defined by:
 \section{Average of a Discrete Random Variable}
 \begin{itemize}
     \item Each time a random experiment is carried out, an associated RV takes on a
-    value. Is it possible find an “average” value of the RV ?
+        value. Is it possible find an “average” value of the RV ?
     \item For instance, on average, how many bits are received in error
-    when 8 bits are transmitted?
+        when 8 bits are transmitted?
     \item Or, on average, how many bits must be received until the first (the
-    r-th) error occurs?
-    \begin{itemize}
-        \item Note that in both cases, you can take a sample, i.e. repeat the
-        respective experiment several times and take the value of the
-        RV each time.
-        \item An average computed this way is, however, dependent on the samle!
-        \item Is it possible to get a sample independent value?
-    \end{itemize}
+        r-th) error occurs?
+        \begin{itemize}
+            \item Note that in both cases, you can take a sample, i.e. repeat the
+                respective experiment several times and take the value of the
+                RV each time.
+            \item An average computed this way is, however, dependent on the samle!
+            \item Is it possible to get a sample independent value?
+        \end{itemize}
 \end{itemize}
 \section{Expectation}
 The expected value, or expectation, of a discrete random variable $X$ is given by
@@ -314,13 +314,13 @@ deviation, and is computed via the so-called \textsc{variance}
 
 \[
     \displaystyle \sigma^2 = V(X) = \sum_k  [(x_k -\mu)^2.p_k]\ \ \  \text{or} = 
-    \]  
+\]  
 \[
     \displaystyle [\sum_k x^2_k.p_k] - \mu^2 = E(X^2) - [E(X)]^2
 \]
 Standard Deviation is $\sigma = \sqrt{\sigma^2}$
 \begin{exmp}
-     Compute the mean and the standard deviation of the number of girls in a family with 3 children.\\
+    Compute the mean and the standard deviation of the number of girls in a family with 3 children.\\
 
     \ \ \ \   \includegraphics[width=400px]{4.png}
     \[
@@ -329,12 +329,12 @@ Standard Deviation is $\sigma = \sqrt{\sigma^2}$
 \end{exmp}
 \subsection{Expectation and Variance of Bernoulli Random Variable}
 \begin{longtable}[c]{l|l|l}
-X    &  1   & 0   \\ \hline 
-\endfirsthead
-%
-\endhead
-%
-P(X) & p&  q
+    X    &  1   & 0   \\ \hline 
+    \endfirsthead
+    %
+    \endhead
+    %
+    P(X) & p&  q
 \end{longtable}
 \[
     \mu = 1.p + 0(1-p) = p
@@ -351,25 +351,25 @@ For a binomial RV with parameters n and p we have:
     \sigma^2 = np(1-p) = npq.
 \]
 \begin{exmp}
-     The Statistical Bulletin published by Metropolitan Life Insurance Co.
-     reported that 2\% of all American births result in twins. If a random
-     sample of 8000 births is taken, find the mean, variance, and standard
-     deviation of the number of births that would result in twins.
-     \[
-         X \Rightarrow \text{The number of births that would result in twins}
-     \]
-     \[
-         S \Rightarrow \text{twins}; \ \ F \Rightarrow \text{not twins}
-     \]
-     \[
-         n = 8000; p = 0.2; q = 0.98 
-     \]
-     \[
-         \mu = n.p = 8000 \times 0.02 
-     \]
-     \[
-         \sigma^2 = n.p.q = (8000) \times (0.02) \times (0.98) = 156.8 \Rightarrow \sigma = 12.5
-     \]
+    The Statistical Bulletin published by Metropolitan Life Insurance Co.
+    reported that 2\% of all American births result in twins. If a random
+    sample of 8000 births is taken, find the mean, variance, and standard
+    deviation of the number of births that would result in twins.
+    \[
+        X \Rightarrow \text{The number of births that would result in twins}
+    \]
+    \[
+        S \Rightarrow \text{twins}; \ \ F \Rightarrow \text{not twins}
+    \]
+    \[
+        n = 8000; p = 0.2; q = 0.98 
+    \]
+    \[
+        \mu = n.p = 8000 \times 0.02 
+    \]
+    \[
+        \sigma^2 = n.p.q = (8000) \times (0.02) \times (0.98) = 156.8 \Rightarrow \sigma = 12.5
+    \]
 \end{exmp}    
 \subsection{Expectation and Variance of the Geometric r.v}
 For a geometric RV with parameter p we have:

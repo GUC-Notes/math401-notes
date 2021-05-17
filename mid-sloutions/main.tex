@@ -1,0 +1,79 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Problem Set/Assignment Template to be used by the
+%% Food and Resource Economics Department - IFAS
+%% University of Florida's graduates.
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Version 1.0 - November 2019
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ariel Soto-Caro
+%%  - asotocaro@ufl.edu
+%%  - arielsotocaro@gmail.com
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{design_ASC}
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
+
+\theoremstyle{definition}
+\usepackage{longtable}
+\newtheorem{exmp}{Example}[section]
+\newtheorem{slo}{Definition}[section]
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+\setlength\parindent{0pt} %% Do not touch this
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
+%% -----------------------------
+%% TITLE
+%% -----------------------------
+\title{\textbf{Selected Problems}} %% Assignment Title
+
+\author{\textbf{Ibrahim Abou Elenein}}
+
+\date{\today} %% Change "\today" by another date manually
+%% -----------------------------
+%% -----------------------------
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\setlength{\droptitle}{-5em}    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+% --------------------------
+% Start here
+% --------------------------
+\section{Midterm  2017} 
+% %%%%%%%%%%%%%%%%%%%
+\subsection{Problem 4 a}
+\begin{exmp}
+    From a deck of 52 cards, a 5-card hand is dealt. Find the number of
+    hands containing exactly one pair without considering the variation
+    of the suits?
+
+    \subsubsection{Answer}
+    \textbf{Without considering the suits}, my approach would be:
+
+    The pair can be one of 13 numbers, i.e. we need to pick 1 out of 13 candidates.
+
+    For the remaining 3 cards, 3 cards with identical number. In this case we need to pick 1 out of 12 candidates.
+    \[
+        \overbrace{\Comb{13}{1}}^{\text{number of ways to select one pair}}
+        \times \underbrace{\Comb{12}{3}}_{\text{number of ways to select other 3 cards}}
+    \]
+\end{exmp}
+\subsection{Problem 3 b}
+\begin{exmp}
+    In how many ways can we distribute 9 identical picses of candy
+    to four children, if each child must get at least one piece?
+    \subsubsection{Answer}
+    The first four candies will be distributed to the children.
+    Now we have 5 candies to be distributed to the childern
+    Imagine 3 divisors (or blocks) we will use to group the candies,
+    for each arrangement of the divisors and candies is a distribution.
+    Now we have $8!$ arrangement but removing the duplicates for the
+    candies $5!$ and $3!$ for the divisors 
+    \[
+        \frac{8!}{5!.3!}
+    \]
+\end{exmp}
+
+\end{document}
