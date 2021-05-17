@@ -243,4 +243,89 @@ trials required to obtain r successes. That is, the number of
 successes r is predetermined, and the number of trials (n or k)
 represents the random variable X.
 \end{enumerate}    
+
+\section{Probability Mass Function}
+Using the probability distribution “PD” of a discrete RV,
+X, with possible values $x_1, x_2\dots, x_n.$ A probability mass function is a function defined such that:
+\begin{enumerate}
+    \item \[    f(X_k) = P(X = x_k) = p_k,  \]
+    \item \[          f(x_k) \geq 0,  \]
+    \item \[  \displaystyle \sum_{k=1}^{n} f(x_k) = 1.       \]
+\end{enumerate}
+Example :\[ f(x)= \begin{cases} 
+      p_k, & x=x_k \\
+      0, & otherwise
+   \end{cases}
+\] $f$ is a function that is non-trivial only on the range of $X$.
+
+\begin{center}
+    \includegraphics[width=201px]{2.png}
+\end{center}
+\section{Cumulative Probability Function}
+The following function provides an alternative definition for X.
+The cumulative probability function of a DRV X is defined by:
+\[
+    \displaystyle F(x) = P(X \leq x) = \sum_{x_k \leq x}f(x_k)
+\]
+\[ F(x)= \begin{cases} 
+      0, & x < x_1 \\
+      p_1, & x_1 \leq x < x_2 \\
+      p_1 + p_2, & x_2 \leq x < x_3 \\
+      \dots
+   \end{cases}
+\]
+\begin{center}
+\includegraphics[width=200px]{3.png}
+\end{center}
+\subsection{Notes}
+\begin{enumerate}
+    \item $F$ is a step function
+    \item $  0 \leq F(X) \leq 1   $
+    \item if $x \leq y \Rightarrow F(x) \leq F(y)$
+\end{enumerate}
+\section{Average of a Discrete Random Variable}
+\begin{itemize}
+    \item Each time a random experiment is carried out, an associated RV takes on a
+    value. Is it possible find an “average” value of the RV ?
+    \item For instance, on average, how many bits are received in error
+    when 8 bits are transmitted?
+    \item Or, on average, how many bits must be received until the first (the
+    r-th) error occurs?
+    \begin{itemize}
+        \item Note that in both cases, you can take a sample, i.e. repeat the
+        respective experiment several times and take the value of the
+        RV each time.
+        \item An average computed this way is, however, dependent on the samle!
+        \item Is it possible to get a sample independent value?
+    \end{itemize}
+\end{itemize}
+\section{Expectation}
+The expected value, or expectation, of a discrete random variable $X$ is given by
+\[
+    \displaystyle \mu = E(X) = \sum X *P(X) = \sum_k x_k p_k
+\]
+The formula gives a weighted average of values
+of a random variable, with the probabilities being
+the weights of the respective values.
+(One can see that the expected value as a weighted probability).
+\section{Variance and Standard Deviation}
+The average spread of a DRV around its expectation is called the standard
+deviation, and is computed via the so-called \textsc{variance}
+
+\[
+    \displaystyle \sigma^2 = V(X) = \sum_k  [(x_k -\mu)^2.p_k]\ \ \  \text{or} = 
+    \]  
+\[
+    \displaystyle [\sum_k x^2_k.p_k] - \mu^2 = E(X^2) - [E(X)]^2
+\]
+Standard Deviation is $\sigma = \sqrt{\sigma^2}$
+\begin{exmp}
+     Compute the mean and the standard deviation of the number of girls in a family with 3 children.\\
+
+    \ \ \ \   \includegraphics[width=400px]{4.png}
+    \[
+        \sigma = \sqrt{\sigma^2} = \sqrt{[\sum X^2.P(X)]- \mu^2} = \sqrt{3-(1.5)^2}
+    \]
+\end{exmp}
+\subsection{Expectation and Variance of Bernoulli Random Variable}
 \end{document}
