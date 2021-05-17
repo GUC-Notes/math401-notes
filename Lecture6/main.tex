@@ -328,4 +328,55 @@ Standard Deviation is $\sigma = \sqrt{\sigma^2}$
     \]
 \end{exmp}
 \subsection{Expectation and Variance of Bernoulli Random Variable}
+\begin{longtable}[c]{l|l|l}
+X    &  1   & 0   \\ \hline 
+\endfirsthead
+%
+\endhead
+%
+P(X) & p&  q
+\end{longtable}
+\[
+    \mu = 1.p + 0(1-p) = p
+\]
+\[
+    \sigma^2 = [1^2.p + 0^2(1-p)] - p^2 = p(1-p) = pq.
+\]
+\subsection{Expectation and Variance of the Binomial RV}
+For a binomial RV with parameters n and p we have:
+\[
+    \mu = np, 
+\]
+\[
+    \sigma^2 = np(1-p) = npq.
+\]
+\begin{exmp}
+     The Statistical Bulletin published by Metropolitan Life Insurance Co.
+     reported that 2\% of all American births result in twins. If a random
+     sample of 8000 births is taken, find the mean, variance, and standard
+     deviation of the number of births that would result in twins.
+     \[
+         X \Rightarrow \text{The number of births that would result in twins}
+     \]
+     \[
+         S \Rightarrow \text{twins}; \ \ F \Rightarrow \text{not twins}
+     \]
+     \[
+         n = 8000; p = 0.2; q = 0.98 
+     \]
+     \[
+         \mu = n.p = 8000 \times 0.02 
+     \]
+     \[
+         \sigma^2 = n.p.q = (8000) \times (0.02) \times (0.98) = 156.8 \Rightarrow \sigma = 12.5
+     \]
+\end{exmp}    
+\subsection{Expectation and Variance of the Geometric r.v}
+For a geometric RV with parameter p we have:
+\[
+    \mu = \frac{1}{p}.
+\]
+\[
+    \sigma^2 = \frac{1-p}{p^2} = \frac{q}{p^2}.
+\]
 \end{document}
