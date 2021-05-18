@@ -75,5 +75,31 @@
         \frac{8!}{5!.3!}
     \]
 \end{exmp}
-
+\section{Midterm 16}
+\subsection{Problem 3 b}
+\begin{exmp}
+    Three cards are drawn from a standard deck and lined on a table.
+    Find the probability that the first (leftmost) card is a queen
+    , the seconed is a jack, and the third (rightmost) is not a club.
+    \subsubsection{Answer}
+    First of all proving that choosing one queen or jack is independent of
+    choosing not club 
+    \[
+        P(Q) = \frac{1}{13}; \ \ \ P(!C) = \frac{3}{4}
+    \]
+    \[
+        P(!C \cap Q) = \frac{3}{52} = P(Q) \times P(!C)
+    \]
+So the Probability will be as follows 
+\[
+    \underbrace{P(Q)}_{\text{Probability of choosing queen}} 
+    \times \underbrace{P(J|Q)}_{\text{Probability of choosing jack given queen}}
+    \times \underbrace{P(!C)}_{\text{Probability of choosing not club}}
+\]
+\[
+    \frac{1}{13}\   \ \ \ \ \  \ \ \ \ \ \ \ \ \ \times \ \ \ \ \ \ \ \ \ \  \ \ \ \
+    \frac{3}{51} \ \ \ \ \ \ \ \ \ \  \ \ \ \ \times  \ \ \ \ \ \ \ \ \ \  \ \ \ \ \frac{3}{4}
+\]
+    
+\end{exmp}
 \end{document}
